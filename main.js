@@ -1,15 +1,18 @@
 var x = document.getElementById('progress-bar-line');
 let count = 1;
+let progress = 0;
 var observer = new MutationObserver(function(mutations) {
   mutations.forEach(function(mutation) {
     if (mutation.type === "attributes") {
-      var val = mutation.target.getAttribute('aria-valuenow')
-      if (val == 99) {
-        var nextVidEl = document.getElementById(count);
+      let val = mutation.target.getAttribute('aria-valuenow')
+      if (val < progress) {
+        let nextVidEl = document.getElementById(count);
         nextVidEl.scrollIntoView();
         var x = document.getElementById('progress-bar-line');
         count++;
+        progress = 0
       }
+      progress = val;
     }
   });
 });
