@@ -4,4 +4,6 @@ Just paste the content of main.js into the console when on the youtube shorts pa
 
 Or you can save the content of min.js as the URL for a bookmark, and then just click the bookmark when you're on yt shorts.
 
+You can use the Tamper Monkey extension to run this automatically.
+
 Feel free to do anything with this. If you make an actual chrome extension please let me know!
