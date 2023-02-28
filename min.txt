@@ -1,0 +1,1 @@
+javascript:var x=document.getElementById("progress-bar-line");let count=1;var observer=new MutationObserver(function(e){e.forEach(function(e){"attributes"===e.type&&99==e.target.getAttribute("aria-valuenow")&&(document.getElementById(count).scrollIntoView(),document.getElementById("progress-bar-line"),count++)})});observer.observe(x,{attributes:!0});
