@@ -4,7 +4,7 @@ let progress = 0;
 var observer = new MutationObserver(function(mutations) {
   mutations.forEach(function(mutation) {
     if (mutation.type === "attributes") {
-      let val = mutation.target.getAttribute('aria-valuenow')
+      let val = parseInt(mutation.target.getAttribute('aria-valuenow'))
       if (val < progress) {
         let nextVidEl = document.getElementById(count);
         nextVidEl.scrollIntoView();
