@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Youtube Shorts Autoplay",
+    "version": "1.0",
+    "description": "A chrome extension that auto plays the next youtube short",
+    "icons": { "128": "icon128.png" },
+    "permissions": ["*://*.youtube.com/*"],
+    "matches": ["*://*.youtube.com/shorts*"],
+    "content_scripts": [{
+      "matches": ["*://*.youtube.com/shorts*"],
+      "js": ["main.js"]
+}]
+}
